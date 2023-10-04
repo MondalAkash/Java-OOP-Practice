@@ -1,8 +1,13 @@
 import interfaces.Search;
 
+import java.util.Scanner;
+
 public class LinearSearch implements Search {
     @Override
-    public int linearSearch(int[] arr, int valueToSearch) {
+    public int search(int[] arr) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter value to Search: ");
+        int valueToSearch = s.nextInt();
         int counter = -1;
         for(int i = 0; i<arr.length; i++)
         {

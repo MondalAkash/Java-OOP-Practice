@@ -12,16 +12,16 @@ public class BubbleSorts implements BubbleSort {
     @Override
     public int[] bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i+1; j < arr.length; j++) {
-                if(arr[j]<arr[j+1])
+            for (int j = 1; j < arr.length; j++) {
+                if(arr[j]<arr[j-1])
                 {
-                    swap(arr, i, j);
+                    swap(arr, j, j-1);
                 }
             }
         }
         System.out.println("Sorted Array: ");
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
+            System.out.print(arr[i]+" ");
         }
         return arr;
     }
